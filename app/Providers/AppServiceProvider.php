@@ -8,7 +8,7 @@ namespace App\Providers;
 use Doctrine\DBAL\Schema\Schema;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Url;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         //Schema::defaultStringLength(191);
-        Url::forceScheme('https');
+        //Url::forceScheme('https');
         Paginator::useBootstrap();
     
     }
