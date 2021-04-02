@@ -4,8 +4,11 @@ namespace App\Providers;
 
 //use Illuminate\Contracts\Pagination\Paginator;
 //use Illuminate\Pagination\AbstractPaginator;
+
+use Doctrine\DBAL\Schema\Schema;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Url;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        //Schema::defaultStringLength(191);
+        Url::forceScheme('https');
         Paginator::useBootstrap();
     
     }
